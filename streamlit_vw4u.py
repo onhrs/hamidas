@@ -26,7 +26,7 @@ G = ox.graph_from_bbox(mr['north'], mr['south'], mr['east'], mr['west'], network
 
 api_key = st.text_input('api_key', type="password")
 car_n = st.number_input('車の数', step=1)
-num_route = st.number_input('経路パターンの数', step=5)
+num_route = st.number_input('経路パターンの数', step=1)
 
 def penalty(G,route,pen):
   for k in range(len(route)-1):
