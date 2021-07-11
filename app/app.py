@@ -9,7 +9,7 @@ from package import hirau
 APP_PATH = os.getcwd()
 
 #st.write(APP_PATH)
-image = Image.open(APP_PATH+'/images/HIRA.png')
+image = Image.open(APP_PATH+'/app/images/HIRA.png') #/app/hirau/images/HIRA.png
 st.image(image, caption='HIRA', width=500)
 
 geo_address = st.text_input('住所',)
