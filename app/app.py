@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 
 from package import hirau
-import config
+#import config
 
 APP_PATH = os.getcwd()
 
@@ -30,7 +30,7 @@ if select_quantum=='d-wave':
 
 map_button = st.checkbox("地図表示", key="A")
 
-if map_button and exec_pass==config.exec_pass:
+if map_button and exec_pass==st.secrets["exec_pass"]:
   fig, G, hirau_list,end_list, leader_list, nodes_color_list, nodes_for_plot = hirau.plot_map(geo_address=geo_address, S=n_reader, M=n_people, E=n_shelter)
   st.pyplot(fig)
 
