@@ -1,0 +1,4 @@
+service: web-hirau
+runtime: custom
+env: flex
+
